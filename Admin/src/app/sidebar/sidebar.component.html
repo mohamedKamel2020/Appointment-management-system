@@ -1,0 +1,39 @@
+<div class="row sidebar" style="height: 940px;">
+  <div class="col-sm-auto bg-dark sticky-top" style="width: 150px;">
+    <div class="d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top">
+      <ul
+        class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+        <li class="nav-item">
+          <a routerLink="/home" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="Home">
+            <i class="bi bi-house fs-1"></i>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/appointments" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+            data-bs-placement="right" data-bs-original-title="Orders">
+            <i class="bi-table fs-1"></i>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/books" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="books">
+            <i class="bi-alarm fs-1"></i>
+          </a>
+        </li>
+        <!-- <li>
+          <a routerLink="/users" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-original-title="users">
+            <i class="bi-people fs-1"></i>
+          </a>
+        </li> -->
+        <li>
+          <button (click)="logout()" type="button" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+            data-bs-placement="right" data-bs-original-title="logout">
+            <i class="bi-box-arrow-right fs-1"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

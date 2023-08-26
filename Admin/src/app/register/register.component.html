@@ -1,0 +1,62 @@
+<div *ngIf="err" class="alert alert-danger m-2 text-center">
+  {{err}}
+</div>
+<div class="card" style="background-color:rgb(45, 39, 36); border-color:black; border-style: solid; margin: 20%; margin-top: 6%;">
+
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-75 m-auto py-4">
+    <div>
+      <h5 style="font-weight: bold; font-family: 'Franklin Gothic Medium'; color: aliceblue;" class="text-center">Welcome To Appointment</h5>
+    </div>
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">First name
+      </label>
+      <input type="text" formControlName="firstName" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('firstName')?.errors }">
+      <div *ngIf="submitted && form.get('firstName')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('firstName')?.errors">First Name is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">Last name
+      </label>
+      <input type="text" formControlName="lastName" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('lastName')?.errors }" />
+      <div *ngIf="submitted && form.get('lastName')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('lastName')?.errors">Last Name is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">Username
+      </label>
+      <input type="text" formControlName="username" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('username')?.errors }" />
+      <div *ngIf="submitted && form.get('username')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('username')?.errors">Username is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">Password
+      </label>
+      <input type="password" formControlName="password" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('password')?.errors }" />
+      <div *ngIf="submitted && form.get('password')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('password')?.errors">Password is required</div>
+      </div>
+    </div>
+    <div class="py-2">
+      <p style="color: rgb(102, 60, 6); font-weight: bold;">Do have an account? <a routerLink="/login"
+          style="color: red;">Sign in</a></p>
+    </div>
+    <div>
+      <button [disabled]="loading" class="btn btn-success">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+        Register
+      </button>
+      <a routerLink="../login" class="btn btn-link">Cancel</a>
+    </div>
+  </form>
+</div>

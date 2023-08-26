@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h3>Add new Appoinment</h3>
+  <hr>
+  <form (ngSubmit)="addAppointment()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Appoinment name</label>
+      <input type="text" class="form-control" name="Name" id="Name"
+        [(ngModel)]="newAppointment.name">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Appointment description</label>
+      <input type="text" class="form-control" name="description" id="description"
+        [(ngModel)]="newAppointment.description">
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="date" class="form-control" name="date" id="date"
+        [(ngModel)]="newAppointment.date">
+    </div>
+
+    <div class="mb-3">
+      <label for="owner" class="form-label">Owner</label>
+      <input type="text" class="form-control" name="owner" id="owner" [(ngModel)]="newAppointment.owner">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-md navbar-light" style="background-color:lightgrey;">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/appointment.jpg" alt="logo" style="width: 70px; height: 50px;border-color: black;">
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" style="font-weight: bold;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/appointments"  routerLinkActive="active" style="font-weight: bold; ">Appointments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/books"  routerLinkActive="active" style="font-weight: bold; ">Books</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button class="nav-link" (click)="logout()" routerLinkActive="active" style="font-weight: bold ;">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <hr>
+  <table class="table table-info">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col-1">Name</th>
+        <th scope="col-1">Phone No.</th>
+        <th scope="col-2">Address</th>
+        <th scope="col-2">Date Of Hire</th>
+        <th scope="col-2">appointment</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of allBooks;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{book?.name}}</td>
+        <td>{{book?.phoneNo}}</td>
+        <td>{{book?.address}}</td>
+        <td>{{book?.dateOfHire}}</td>
+        <td>
+          {{book?.appointmentID}}
+        </td>
+        <td>
+          <a type="button" class="btn btn-danger" (click)="deleteBook(book)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

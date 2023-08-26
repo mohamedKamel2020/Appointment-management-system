@@ -1,0 +1,37 @@
+// /* You can add global styles to this file, and also import other style files */
+ @import"../node_modules/bootstrap/scss/bootstrap.scss";
+ @import"../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+//  @import"/User/node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+//  @import"/User/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+
+body{
+  overflow-x: hidden;
+  background-color:#201010;
+  // color: aliceblue !important;
+}
+// .movie-item img{
+//   width: 60px;
+// }
+
+// .vote{
+//   position: absolute;
+//   top: 0px;
+//   right: 10px;
+//   background-color:darkturquoise;
+//   padding: 8px;
+//   font-weight: 600;
+//   font-size: 16px;
+//   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+//   color: black;
+// }
+a{
+  text-decoration: none;
+  color: black;
+  font-size: bold;
+}
+a:hover{
+  color: red;
+}
+

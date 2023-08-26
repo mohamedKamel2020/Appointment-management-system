@@ -1,0 +1,33 @@
+<h3>Users</h3>
+<hr>
+<table class="table table-primary">
+    <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col-2">Username</th>
+          <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.username}}</td>
+            <!-- <td style="white-space: nowrap">
+                <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting">
+                    <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!user.isDeleting">Delete</span>
+                </button>
+            </td> -->
+            <td>
+              <a type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a>
+            </td>
+        </tr>
+        <!-- <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr> -->
+    </tbody>
+</table>

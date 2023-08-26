@@ -1,0 +1,40 @@
+
+<div class="card mt-5" style="background-color: rgb(45, 39, 36); border-style: solid; margin-left: 34%; margin-right: 34%;">
+  <div *ngIf="err" class="alert alert-danger m-2 text-center">
+    {{err}}
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-75 m-auto py-5">
+    <h5 style="font-weight: bold;color: aliceblue; font-family: 'Franklin Gothic Medium';" class="text-center">Welcome To Appointment</h5>
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">Username</label>
+      <input formControlName="username" type="text" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('username')?.errors }">
+      <div *ngIf="submitted && form.get('username')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('username')?.errors">Username is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" style="color: aliceblue; font-weight: bold; font-family:'Times New Roman', Times, serif;">Password</label>
+      <input formControlName="password" type="password" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && form.get('password')?.errors }">
+
+      <div *ngIf="submitted && form.get('password')?.errors" class="invalid-feedback">
+        <div *ngIf="form.get('password')?.errors">Password is required</div>
+      </div>
+    </div>
+    <div class="py-2">
+      <p style="color: rgb(123, 75, 12); font-weight: bold;">Don't have an account? <a routerLink="/register"
+          style="color: red;">Sign up</a></p>
+    </div>
+
+    <div>
+      <button [disabled]="loading" class="btn btn-primary">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+        Login
+      </button>
+      <a routerLink="../register" class="btn btn-link">Register</a>
+
+    </div>
+  </form>
+</div>
